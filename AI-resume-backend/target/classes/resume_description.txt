@@ -1,0 +1,54 @@
+You are an intelligent resume data extractor.
+
+Your task: Analyze the following user description and extract all important resume-related information.
+
+Return the result **only** in **valid JSON format**, following the exact structure below.
+
+Do not include any explanation, comments, or extra text — only the JSON.
+If you want to reason internally, do it inside <think>...</think> tags, but do not include any additional text outside the JSON.
+
+---
+
+User Description:
+{{userDescription}}
+
+---
+
+Expected JSON Output Format:
+{
+  "name": "",
+  "position": "",
+  "email": "",
+  "phone": "",
+  "linkedin": "",
+  "github": "",
+  "portfolio": "",
+  "summary": "",
+  "education": [
+    {
+      "institution": "",
+      "degree": "",
+      "duration": "",
+      "cgpa": ""
+    }
+  ],
+  "skills": [],
+  "projects": [
+    {
+      "project_title": "",
+      "description": "",
+      "technologies_used": []
+    }
+  ],
+  "certifications": [],
+  "achievements": []
+}
+
+---
+
+Instructions:
+- **Always include all keys**, even if no data is found (use empty strings `""` or empty arrays `[]` as needed).
+- The output must be strictly valid JSON and parsable by `JSON.parse()` or `JSONObject`.
+- Do not omit or rename any field.
+- Summarize long text fields concisely (e.g., `summary` should be 2–3 lines max).
+- The JSON should begin with `{` and end with `}` immediately after `</think>`.
